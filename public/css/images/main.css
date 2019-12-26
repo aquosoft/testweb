@@ -1,0 +1,802 @@
+
+.boton-barra-herramienta {
+    float: right;
+    color: white;
+}
+
+.panel-heading {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.boton-barra-herramienta:hover {
+	-webkit-transform: rotate(0deg); 
+	-moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+	-webkit-transform: scale(1.2); 
+	-moz-transform: scale(1.2);
+        transform: scale(1.2);
+}
+
+body {
+  background: #EEEEEE;
+  color: #000000;
+}
+
+/*.grid-stack-item-content {*/
+/*  background: white;*/
+/*  color:black;*/
+/*}*/
+
+.grid-stack-item-content .fa {
+
+  display: block;
+
+}
+
+header a,
+header a:hover { color: #fff; }
+
+.darklue hr.star-light::after { background-color: #2c3e50; }
+
+
+
+.navbar
+{
+	border-radius: 0;
+	margin: 0;
+
+
+}
+
+.profile-image
+{
+	padding:0 !important;
+}
+
+.navbar-brand
+{
+	padding: 5px;
+}
+
+
+.user {
+  margin-top: 10px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  /*border-radius: 2px;*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+.user-busqueda {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  /*border-radius: 50%;*/
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 2px !important;
+  margin-left: -20px;
+}
+
+
+
+.user-widget {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  /*border-radius: 2px;*/
+  border: 6px solid #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position:left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.user-widget-cuadrado {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position:left;
+}
+
+.user-widget-cuadrado-mini {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position:left;
+}
+
+.user-widget-large {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /*border-radius: 2px;*/
+  border: 6px solid #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position:left;
+}
+
+.titulo-ventana-embebida {
+    border-style: solid;
+    border-width: 1px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 5px;
+    border-color: #E7E7E7;
+    background-color: #FAFAFA;
+    border-top-width: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001 !important;
+}
+
+
+
+.status-bar {
+    z-index: 1001 !important;
+    background-color: #FFFFFF !important;
+    color: #5E5B5A;
+}
+
+table thead tr th {
+  font-size: 10px !important;
+
+}
+
+
+table tbody tr td {
+  font-size: 12px !important;
+
+}
+
+
+time.icon
+{
+  font-size: 1em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  margin: 2em auto;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+}
+
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+
+time.icon em
+{
+  position: absolute;
+  bottom: 0.3em;
+  color: #fd9f1b;
+}
+
+time.icon span
+{
+  width: 100%;
+  font-size: 2.8em;
+  letter-spacing: -0.05em;
+  padding-top: 0.8em;
+  color: #2f2f2f;
+}
+
+time.icon:hover, time.icon:focus
+{
+  -webkit-animation: swing 0.6s ease-out;
+  animation: swing 0.6s ease-out;
+}
+
+@-webkit-keyframes swing {
+  0%   { -webkit-transform: rotate(0deg)  skewY(0deg); }
+  20%  { -webkit-transform: rotate(12deg) skewY(4deg); }
+  60%  { -webkit-transform: rotate(-9deg) skewY(-3deg); }
+  80%  { -webkit-transform: rotate(6deg)  skewY(-2deg); }
+  100% { -webkit-transform: rotate(0deg)  skewY(0deg); }
+}
+
+@keyframes swing {
+  0%   { transform: rotate(0deg)  skewY(0deg); }
+  20%  { transform: rotate(12deg) skewY(4deg); }
+  60%  { transform: rotate(-9deg) skewY(-3deg); }
+  
+} 
+
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form  {
+  background-color: #313338 !important;
+}
+
+.nav-tabs 
+{
+  margin-bottom: 30px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid 
+{
+  background-color: #313338 !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus
+{
+  background-color: #313338 !important;
+}
+
+.zoomeable:hover {
+	-webkit-transform: rotate(0deg); 
+	-moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+	-webkit-transform: scale(1.2); 
+	-moz-transform: scale(1.2);
+  transform: scale(1.2);
+	z-index:10;
+}
+
+
+.boldeable:hover {
+	font-weight:bold;
+}
+
+.botonera-alta
+{
+  position: absolute;
+  margin-top: 50px;
+  bottom: -20px;
+}
+
+input {
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+
+.boton-aceptar-formulario {
+    color:#65D11D;
+    font-size:200%  !important;
+}
+
+
+
+.boton-volver-formulario {
+    color:gray;
+    font-size:200% !important;
+}
+
+.titulo-formulario {
+  background-color: #1E2E3D !important;
+  width: 100% !important;
+  color: white !important;
+  font-size: 150% !important;
+}
+
+
+
+.modal-backdrop
+{
+	z-index: 0;
+	background: rgb(13, 6, 43) !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+
+::-webkit-scrollbar-track {
+   
+    border: 10px !important;
+}
+
+
+::-webkit-scrollbar-thumb {
+    border: 10px !important;
+    background-color: #576173;
+}
+
+.body {
+    scrollbar-base-color: white;
+    scrollbar-base-color: white;
+    scrollbar-3dlight-color: white;
+    scrollbar-highlight-color: #576173;
+    scrollbar-track-color: #576173;
+    scrollbar-arrow-color: #576173;
+    scrollbar-shadow-color: white;
+    scrollbar-dark-shadow-color: white;
+}
+
+.panel {
+  background-color: #EAE9E9 !important;
+  margin-bottom:0px !important;
+}
+
+
+/*CAMBIE EL PANEL HEADING POR DEFECTO 27792759*/
+/*.panel .panel-heading {*/
+/*    background-color: #cce6ff!important;*/
+/*    color: black!important;*/
+/*    font-weight: 800!important;*/
+/*    border: 1px #0084ff solid ;*/
+/*    border-left: 10px #0084ff solid;*/
+    /*padding-left: 0;*/
+/*}*/
+
+.panel .panel-heading {
+  background-color: #28436E !important;
+  font-weight:bold;
+  /*font-size:120%;*/
+          
+ /* ACA Agregar efectos a los titulos*/
+  /*-webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.26);*/
+  /*        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.26);*/
+}
+
+.panel .titulos1{
+  background-color: #5680c2!important; /*tonos verdozos*/
+}
+
+.panel .titulos2{
+  background-color: #698ec9!important;
+  /*color:black;
+  font-weight: bold;*/
+}
+
+.panel .titulos3{
+  background-color: #7c9cd0!important; /*azul mas clarito mismo tono q header comu*/
+}
+
+.panel .titulos4 {
+    background-color: #ffe6b3!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #cc8800 solid ;    
+    border-left: 10px #cc8800 solid;
+    /*padding-left: 0;*/
+}
+
+/*.panel .titulos4 span[id*="Titulo"]{*/
+/*    background-color: #cc8800!important;*/
+/*    padding: inherit;*/
+/*    border:1px #cc880 solid;*/
+/*}*/
+
+/*esto es para que el titulo tome un color de fondo determinado*/
+/*.panel .titulos4 span[id*="Titulo"] {*/
+/*    background-color: #ffb31a!important;*/
+/*    padding: inherit;*/
+/*    border: 2px solid #ffb31a!important;*/
+/*    border-color: #ffb31a;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+
+.panel .titulos5 {
+    background-color: #e6f3ff!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #0084ff solid ;
+    /*border-left: 10px #0084ff solid;*/
+    border-left: 10px #4da9ff solid;
+    /*padding-left: 0;*/
+}
+.panel .titulos5_subtitulo {
+    background-color: #e6f3ff!important;
+    color: black!important;
+    font-weight: 800!important;
+    border-bottom: 1px #0084ff solid ;
+    /*border-left: 10px #4da9ff solid;*/
+
+}
+
+.panel .titulos6 {
+    background-color: #d4f7d9!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #1c972e solid ;    
+    border-left: 10px #1c972e solid;
+    /*padding-left: 0;*/
+}
+
+.panel .titulo-mitad {   /* CV */
+    height: 20px;
+}
+
+.titulo-mitad .nav-tabs > li > a, .titulo-mitad .nav-tabs > li > a:focus {    /* CV */
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
+}
+
+
+.titulo-mitad .nav-tabs > li > a:hover, .titulo-mitad .nav-tabs > li > a:focus:hover {   /* CV */
+    background-color: #99ceff;
+    color: black;
+}
+
+.panel .titulos8 {
+    background-color: #ffcce6!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #b30059 solid ;    
+    border-left: 10px #b30059 solid;
+    /*padding-left: 0;*/
+}
+.panel .titulos9 {
+    background-color: #e6e6e6!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #595959 solid ;    
+    border-left: 10px #595959 solid;
+    /*padding-left: 0;*/
+}
+.panel .titulos10 {
+    background-color: #ffffcc!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #b3b300 solid ;    
+    border-left: 10px #b3b300 solid;
+    /*padding-left: 0;*/
+}
+
+
+.panel .titulos7 { /*lo uso para los tabs la diferencia es el margen izquierdo de 1px por que junto queda feo.*/ 
+    padding-bottom: 0px!important;
+    /*background-color: #cce6ff!important;*/
+    background-color: #e6f3ff!important;
+    color: black!important;
+    font-weight: 800!important;
+    border: 1px #0084ff solid ;
+    /*border-left: 10px #0084ff solid;*/
+    border-left: 10px #4da9ff solid;
+    padding-left: 1px;
+}
+
+.panel .titulosWidget {
+    background-color: #f2f2f2 !important;
+    color: black!important;
+    border: 1px solid darkgray;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+.fondo_widget {
+    background-color: #f2f2f2 !important;
+}
+
+/*.panel .titulosWidget:hover {*/
+/*    background-color: #b3cccc !important;*/
+/*}*/
+
+
+.nav-tabs > li > a, .nav-tabs > li > a:focus { /*navtabs titulos7*/
+  font-family:Dosis,Arial,sans-serif !important;
+  margin-right: 0;
+  background-color: transparent;
+  border: none;
+  color: black;/*white;*/
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size:120%;
+  letter-spacing:1px;
+  box-shadow:none;   /*CV*/
+
+    line-height: 1.2!important;
+    border: 0px solid transparent!important;
+    border-radius: 0!important;  
+}
+
+
+
+
+/*esto es para que el titulo tome un color de fondo determinado*/
+/*.panel .titulos6 span[id*="Titulo"] {*/
+/*    background-color: #53df68!important;*/
+/*    padding: inherit;*/
+/*    border: 2px solid #53df68!important;*/
+/*    border-color: #53df68;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+
+
+.panel .colorsuccess{
+    background-color: rgba(76, 175, 80,.3)!important; /*#cbe7cb!important;*/
+    color: black;
+    border-color: rgba(76, 175, 80,1)!important;
+    border-left: 6px solid rgba(76, 175, 80, 1)!important;
+    border: 1px solid;        
+}
+.panel .colorinfo{
+    background-color: rgba(156, 39, 176,.3)!important;
+    color: black;
+    border-color: rgba(156, 39, 176,1)!important;
+    border-left: 6px solid rgba(156, 39, 176,1)!important;
+    border: 1px solid;       
+}
+
+.panel .colorwarning{
+    background-color: rgba(255, 152, 0,.3)!important;
+    color: black;    
+    border-color: rgba(255, 152, 0, 1)!important;
+    border-left: 6px solid rgba(255, 152, 0, 1)!important;
+    border: 1px solid;    
+}
+.panel .colorprimary{
+    background-color: rgba(13, 135, 233, .3)!important;
+    color: black;
+    border-color: rgba(13, 135, 233, 1)!important;
+    border-left: 6px solid rgba(13, 135, 233, 1)!important;
+    border: 1px solid;         
+}
+.panel .colordanger{
+    background-color: rgba(229, 28, 35, .3)!important;
+    color: black;
+    border-color: rgba(229, 28, 35, 1)!important;
+    border-left: 6px solid rgba(229, 28, 35, 1)!important;
+    border: 1px solid;            
+}
+
+
+
+
+.panel .panel-heading {
+    /*background-color: red !important;*/
+    font-weight: bold;
+    /*font-size:120%;*/
+}
+
+.panel .panel-heading .toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'FontAwesome';
+    /* essential for enabling glyphicon */
+    content: "\f077";
+    /* adjust as needed, taken from bootstrap.css */
+    float: right;
+    /* adjust as needed */
+    color: #bfbfbf!important;
+    /*color: #EEEEEE;*/
+    /* adjust as needed */
+}
+
+.panel .panel-heading .toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f078";
+    /* adjust as needed, taken from bootstrap.css */
+}
+
+
+body {
+     background-repeat: no-repeat;
+     background-color: #EAE9E9 !important;
+     background: -webkit-gradient(linear, left top, left bottom, from(#EAE9E9), to(#cbccc8));
+     background: -moz-linear-gradient(top, #EAE9E9, #cbccc8);
+} 
+
+.panel-widget {
+/*NUEVO saca bordes redondeados*/
+  /*border-top-left-radius: 5px !important;*/
+  /*border-top-right-radius: 5px !important;*/
+}
+
+.grid-stack-item-content {
+/*NUEVO saca bordes redondeados*/
+  /*border-bottom-right-radius: 5px !important;*/
+  /*border-bottom-left-radius: 5px !important;*/
+
+   background-color: #EAE9E9 !important;
+
+/*NUEVO sombra */
+/* VERSION MIA*/
+  /*-webkit-box-shadow: 10px 10px 5px #888;*/
+  /*        box-shadow: 10px 10px 5px #888;*/
+  -webkit-box-shadow: 8px 5px 5px #888;
+          box-shadow: 8px 5px 5px #888;
+/* VERSION JP*/
+  /*-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+  /*        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+}
+
+
+.estado-conexion-buena {
+  color:green;
+}
+
+.estado-conexion-mala {
+ color:red; 
+}
+
+
+.estado-conexion-intermedia {
+ color:yellow; 
+}
+
+
+.modal-dialog-grande {
+  width: 80%;
+}
+
+.modal-dialog-mediano {
+  width: 70%;
+}
+
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+.without-padding {
+  padding:0 !important;
+}
+
+.menu-icon-background {
+    color: #333940;
+    border-color: 1px solid white !important;
+}
+
+.menu-icon-foreground {
+    color: #E3E3E8;
+     padding-left: 6px;
+}
+
+
+.ubicacion-icon-background {
+    color: #00A7DA;
+}
+
+.ubicacion-icon-foreground {
+    color: white;
+    
+}
+
+
+.sub-menu-icon-background {
+    color: #C3D5E2;
+    border-radius: 2px solid white !important;
+    
+}
+
+.main-menu-icon-foreground {
+    color: #274066;
+
+}
+
+.main-menu-icon-background {
+    color: #C3D5E2;
+    /*border-radius: 2px solid white !important;*/
+}
+
+.sub-menu-icon-foreground {
+    color: #274066;
+    padding-left: 8px;
+}
+
+
+
+label {
+   text-transform: capitalize; /*uppercase*/
+}
+
+.menu-header {
+  list-style: none;
+}
+
+
+.dropdown-menu.cuadrado {
+  padding: 10px !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus  {
+  background-color: transparent !important;
+}
+
+.tt-menu { 
+  max-height: 500px !important;
+  overflow-y: scroll !important;
+  overflow-x: none !important;
+}
+
+.bordes_anchos {
+  padding: 20px 10px 30px 10px ;
+}
+
+mark {
+    
+
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: normal;
+    color: black; /*white;*/
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #bfbfbf;
+    border-radius: 10px;
+
+}
+
+.typeahead.dropdown-menu {
+    z-index: 10000 !important;
+    max-height: 400px !important;
+    overflow-y: scroll !important;
+}
+
+kbd {
+  display: none !important;
+}
+
+div .panel-heading .pull-right {
+  /*color:transparent !important; modificado para botones de widgets*/
+  color:black !important;
+}
