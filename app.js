@@ -75,6 +75,7 @@ web_bundle.addJs("js/arch/jquery-1.11.1.min.js");
 web_bundle.addJs("js/arch/jquery-ui.min.js");
 web_bundle.addJs("js/arch/tkn-common.js");
 web_bundle.addJs("js/arch/toastr.min.js");
+web_bundle.addJs("js/arch/bootstrap.min.js");
 web_bundle.addJs("js/pantalla.js");
 
 
@@ -219,7 +220,57 @@ app.get('/inject_pantalla', function(req, res) {
         datos: params
     });
 });
+app.get('/ejecutarComando', function(req, res) {
+    debugger;
+    var comando = JSON.parse(req.query.comando);
+    console.log(comando);
+    // responderJSON(res, JSON.stringify(comando)); 
+    // return;
+    //return;
+    switch (comando.nombre) {
+        case 'encendergpio':
+            
+            encenderGpio(res,comando);
+            break;
+        
+        default:
+            comandoDesconocido(res);
+            break
+    }
+    return;    
 
+    
+});
+var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
+function encenderGpio(res,unComando){
+    var gpioUse = parseInt(unComando.args.gpioNumber)
+    var LED = new Gpio(gpioUse, 'out'); //use GPIO pin 4, and specify that it is output
+    var blinkInterval = setInterval(blinkLED, 250); //run the blinkLED function every 250ms
+
+    function blinkLED() { //function to start blinking
+        if (LED.readSync() === 0) { //check the pin state, if the state is 0 (or off)
+            LED.writeSync(1); //set pin state to 1 (turn LED on)
+        } else {
+            LED.writeSync(0); //set pin state to 0 (turn LED off)
+        }
+    }
+
+    function endBlink() { //function to stop blinking
+        clearInterval(blinkInterval); // Stop blink intervals
+        LED.writeSync(0); // Turn LED off
+        LED.unexport(); // Unexport GPIO to free resources
+    }
+
+    setTimeout(endBlink, 5000); //stop blinking after 5 seconds
+    
+    
+   // responderJSON(res, JSON.stringify(unComando));   
+    
+    
+}
+function comandoDesconocido(res){
+    responderJSON(res, JSON.stringify({texto: "comando desconocido"}));  
+}
 // app.options('/wsSelectum', cors());
 // app.get('/wsSelectum', cors(), function(req, res) {
 //     //app.get('/wsSelectum', function(req, res) {  

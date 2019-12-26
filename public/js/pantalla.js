@@ -106,7 +106,7 @@ var Pantalla = {
     },
     _mostrarPantalla: function(url, titulo, onShow, nombrePantalla) {
         var self = this;
-        debugger;
+        //debugger;
 
         $('.fondo_inicial').show();
         var me = this;
@@ -116,62 +116,24 @@ var Pantalla = {
         //var popupProgreso = Mensajes.popupMensajeAccionEnProgreso(100);
         self._leerPagina(url, function(html) {
 
-            if (nombrePantalla) {
-                //VER QUE PASA CUANDO TENGO NOMBRE DE PANTALLA, PERO NADA ASINCRONICO ADENTRO... COMO RESOLVERLO. POR AHORA NO ANDAN LOS EDITORES QUE NO SEAN EL DE AFILIADOS.
-                var _asyncTemp = Tekno.AsyncOrquestaModule.createAsynOrquesta(nombrePantalla);
-
-                var d = $('<div class="pantalla_agregada"></div>').appendTo($('#contenido-sidebar'));
-                var j = $('<div class="bordes_anchos"></div>').appendTo(d);
-                j.hide();
-                j.html(html);
-
-                setTimeout(function() {
-                    if (!_asyncTemp.esFinalizado()) {
-                        _asyncTemp.addPromise(Promise.resolve());
-                        _asyncTemp.FinalizarCargaPromesas();
-
-                    }
-
-                    $('body').removeClass('modal-open');
-
-                }, 0);
-
-                _asyncTemp.CuandoTermine(function() {
-
-                    popupProgreso.cancelar();
-                    Pantalla._ocultarCargando();
-                    j.show();
-
-                    $(".pantalla_agregada").off("remove")
-                    $(".pantalla_agregada").on("remove", function() {
-                        if (onCommandHandle)
-                            onCommandHandle();
-
-                    })
-
-                    if (onShow) onShow();
-
-                });
-            }
-            else {
-                var d = $('<div class="pantalla_agregada"></div>').appendTo($('#contenido-sidebar'));
-                var j = $('<div class="bordes_anchos"></div>').appendTo(d);
-                j.hide();
-                j.html(html);
+            var d = $('<div class="pantalla_agregada"></div>').appendTo($('#contenido-sidebar'));
+            var j = $('<div class="bordes_anchos"></div>').appendTo(d);
+            j.hide();
+            j.html(html);
 
 
-                //popupProgreso.cancelar();
-                Pantalla._ocultarCargando();
-                j.show();
+            //popupProgreso.cancelar();
+            Pantalla._ocultarCargando();
+            j.show();
 
-                $(".pantalla_agregada").off("remove")
-                $(".pantalla_agregada").on("remove", function() {
-                    if (onCommandHandle)
-                        onCommandHandle();
-                })
+            $(".pantalla_agregada").off("remove")
+            $(".pantalla_agregada").on("remove", function() {
+                if (onCommandHandle)
+                    onCommandHandle();
+            })
 
-                if (onShow) onShow();
-            }
+            if (onShow) onShow();
+
 
 
             //Pantalla._apilarPantalla(html);
@@ -312,8 +274,56 @@ var Pantalla = {
             return null;
         }
     },
-  
+    ejecutarComando: function(name, args, cb) {
+        var comando = {
+            nombre : name,
+            args : args
+        }
+        var url = '/ejecutarComando?comando={0}'.format(JSON.stringify(comando))
+        var jqxhr = $.get(url, function(data) {
+            cb(data);
+        });
+
+        jqxhr.fail(function() {
+            alert('error de session?');
+        });        
+        // this.pedidoActual = $.ajax({
+        //     url: '/ejecutarComando',
+        //     type: 'GET', 
+        //     contentType: 'application/json',
+        //     dataType: 'json',
+        //     data: JSON.stringify({
+        //         name: name,
+        //         args: args
+        //     }),
+        //     timeout: 5 * 60 * 1000,
+        //     success: function(data, textStatus, jqXHR) {
+        //         //Pantalla.stopShowingProgress('Proxy2.ejecutarComandoEX:'+name);
+        //         cb(data);
+        //     },
+        //     error: function(jqXHR, textStatus, errorThrown) {
+        //         Pantalla.stopShowingProgress('ejecutarComando:'+name);
+        //         if (textStatus === 'abort'){
+        //             debugger
+        //             toastr.warning('consulta abortada');
+        //             var cbAbort = {
+        //                 header:{
+        //                     Cod : 190,
+        //                     Info: 'Operacion Cancelada'
+        //                 }, 
+        //                 data: null}
+        //             cb(cbAbort);
+                    
+        //         } else {
+        //             toastr.error('ERROR DE CONECTIVIDAD')
+
+        //         }
+        //     }
+        // });
+    },  
     _formularios: {}
+    
+    
 };
 
 function resetNavegacion() {
@@ -470,3 +480,5 @@ function abrirEnNewTab(unArchivo, idpopup) {
         $('#{0}'.format(idpopup)).modal('hide');
     }
 }
+
+
