@@ -32,7 +32,7 @@
     "imap": "0.8.15",
     "node-zip": ">=1.1.1",
     "nodejs": "0.0.0",
-    "nodemailer": "1.8.0",
+    "nodemailer": "6.4.16",
     "onoff": "^5.0.1",
     "path": "^0.12.7",
     "react": "^16.12.0",
