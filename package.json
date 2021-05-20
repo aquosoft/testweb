@@ -28,7 +28,7 @@
     "extend": ">= 3.0.0",
     "formidable": ">= 1.0.17",
     "fs": "0.0.1-security",
-    "html-pdf": ">=1.4.0",
+    "html-pdf": ">=3.0.1",
     "imap": "0.8.15",
     "node-zip": ">=1.1.1",
     "nodejs": "0.0.0",
