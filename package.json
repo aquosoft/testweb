@@ -21,7 +21,7 @@
     "ejs-var": "^1.0.0",
     "epoll": "^3.0.0",
     "exit": "0.1.2",
-    "express": "2.5.8",
+    "express": "4.18.2",
     "express-ejs-layouts": "2.0.0",
     "express-minify": "^1.0.0",
     "express-session": "1.13.0",
